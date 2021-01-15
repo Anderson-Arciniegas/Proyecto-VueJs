@@ -1,21 +1,47 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
+    <Header/>
     <router-view/>
   </div>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+<script>
+  import Header from '@/components/Header.vue';
+
+export default {
+  components: {
+    Header
+  }
 }
+</script>
+
+
+<style lang="scss" scope>
+
+    $carrot: #ffa502;
+    $blue-munsell: #048ba8ff;
+    $charcoal: #2e4057ff;
+    $android-green: #99c24dff;
+    $jet: #2f2d2eff;
+
+@font-face{
+
+    font-family: "CenturyGothic";
+    src: url("assets/fuentes/CenturyGothic.ttf");
+}
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+#app {
+  font-family: "CenturyGothic";
+
+  color: #2c3e50;
+ 
+}
+
 
 #nav {
   padding: 30px;
